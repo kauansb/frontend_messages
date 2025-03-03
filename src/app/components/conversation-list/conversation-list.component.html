@@ -1,0 +1,7 @@
+<mat-list>
+    <mat-list-item *ngFor="let conversation of conversations">
+      <h3 mat-line>Conversa ID: {{ conversation.id }}</h3>
+      <p mat-line>Status: {{ conversation.status }}</p>
+      <button mat-button (click)="viewMessages(conversation.id)">Ver Mensagens</button>
+    </mat-list-item>
+</mat-list>
