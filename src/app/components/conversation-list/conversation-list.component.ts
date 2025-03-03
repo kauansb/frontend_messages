@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { CommonModule } from '@angular/common';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-conversation-list',
   imports: [
     CommonModule,
-    MatListModule,
-    MatButtonModule
+    MatCardModule,
    ],
   templateUrl: './conversation-list.component.html',
   styleUrl: './conversation-list.component.scss'
@@ -31,8 +29,8 @@ export class ConversationListComponent {
     );
   }
 
-  // Método para navegar até a lista de mensagens de uma conversa
-  viewMessages(conversationId: string): void {
+  // Método para abrir os detalhes da conversa
+  openConversationDetails(conversationId: string): void {
     this.router.navigate(['/conversation', conversationId]);
   }
   
